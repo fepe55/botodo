@@ -83,8 +83,9 @@ def _remove_todo(args, chat_id):
         todo_list = _get_todo_list(chat_id)
         result = _pop_todo(todo_list, todo_id)
         if not result['success']:
-            _save_todo_list(todo_list, chat_id)
             return result
+
+    _save_todo_list(todo_list, chat_id)
     return {'success': True}
 
 
