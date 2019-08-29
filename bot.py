@@ -137,7 +137,7 @@ def _save_done_list(done_list, chat_id):
 def _print_list(update, todo_list):
     message = ''
     for todo in todo_list:
-        message += '\[{}] {}\n'.format(todo['id'], todo['msg'])
+        message += '\[{}] `{}`\n'.format(todo['id'], todo['msg'])
 
     if not message:
         message = 'Empty'
